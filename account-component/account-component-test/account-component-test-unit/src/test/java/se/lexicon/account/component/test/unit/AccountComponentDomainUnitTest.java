@@ -16,6 +16,7 @@ public class AccountComponentDomainUnitTest {
     @Test
     public void testDomainCompliance() {
         TestBuilderExecutor.execute(PACKAGE_NAME, DomainMatchers.builder()
-                .withObjectMapper(ObjectMapperFactory.instance()).build());
+                .withObjectMapper(ObjectMapperFactory.instance())
+                .build());
     }
 }

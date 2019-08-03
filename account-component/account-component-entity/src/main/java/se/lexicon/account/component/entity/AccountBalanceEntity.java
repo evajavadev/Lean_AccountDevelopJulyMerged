@@ -38,9 +38,12 @@ public class AccountBalanceEntity extends IdEntity<String> {
     }
 
     private AccountBalanceEntity(Builder builder) {
-        this.arrangementId = Required.notNull(builder.arrangementId, "arrangementId", builder.isTemplate());
-        this.batchId = Required.notNull(builder.batchId, "batchId", builder.isTemplate());
-        this.insertionTimestamp = Required.notNull(builder.insertionTimestamp, "insertionTimestamp", builder.isTemplate());
+        this.arrangementId = Required.notNull(builder.arrangementId, "arrangementId",
+                builder.isTemplate());
+        this.batchId = Required.notNull(builder.batchId, "batchId",
+                builder.isTemplate());
+        this.insertionTimestamp = Required.notNull(builder.insertionTimestamp, "insertionTimestamp",
+                builder.isTemplate());
         this.balances = builder.balances;
     }
 
@@ -71,9 +74,13 @@ public class AccountBalanceEntity extends IdEntity<String> {
         this.batchId = batchId;
     }
 
-    public Instant getInsertionTimestamp() { return insertionTimestamp; }
+    public Instant getInsertionTimestamp() {
+        return insertionTimestamp;
+    }
 
-    public void setInsertionTimestamp(Instant insertionTimestamp) { this.insertionTimestamp = insertionTimestamp; }
+    public void setInsertionTimestamp(Instant insertionTimestamp) {
+        this.insertionTimestamp = insertionTimestamp;
+    }
 
     public Set<Balance> getBalances() {
         return balances;

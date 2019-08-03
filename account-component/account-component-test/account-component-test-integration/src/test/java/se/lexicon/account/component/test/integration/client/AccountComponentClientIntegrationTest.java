@@ -24,20 +24,24 @@ public class AccountComponentClientIntegrationTest {
     public static final RuleChain SUITE_RULE_CHAIN = AccountComponentServiceIntegrationTestSuite.SUITE_RULE_CHAIN;
 
     @Rule
-    public ClearGigaSpaceTestRule clearGigaSpaceTestRule = new ClearGigaSpaceTestRule
-            (AccountComponentServiceIntegrationTestSuite.getExportContext().getBean(GigaSpace.class));
+    public ClearGigaSpaceTestRule clearGigaSpaceTestRule = new
+            ClearGigaSpaceTestRule(AccountComponentServiceIntegrationTestSuite
+            .getExportContext()
+            .getBean(GigaSpace.class));
 
     @Test
     public void testCreatingAccount(){
-        AccountComponentClient accountComponentClient = AccountComponentServiceIntegrationTestSuite.
-                getImportContext()
+        AccountComponentClient accountComponentClient = AccountComponentServiceIntegrationTestSuite
+                .getImportContext()
                 .getBean(AccountComponentClient.class);
-        accountComponentClient.createAccount(AccountTestBuilder.builder().build());
-        Assert.assertEquals(1, AccountComponentServiceIntegrationTestSuite.
-                getExportContext()
+        accountComponentClient
+                .createAccount(AccountTestBuilder.builder()
+                        .build());
+
+        Assert.assertEquals(1, AccountComponentServiceIntegrationTestSuite
+                .getExportContext()
                 .getBean(GigaSpace.class)
-                .count(AccountEntity
-                        .templateBuilder()
+                .count(AccountEntity.templateBuilder()
                         .build()));
     }
 }

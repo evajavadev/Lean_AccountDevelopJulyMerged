@@ -13,7 +13,8 @@ public final class Money extends ValueObject {
     private BigDecimal amount;
     private Currency currency;
 
-    private Money() {}
+    private Money() {
+    }
 
     private Money(Builder builder) {
         this.amount = Required.notNull(builder.amount, "amount");
@@ -44,7 +45,8 @@ public final class Money extends ValueObject {
         private BigDecimal amount;
         private Currency currency;
 
-        private Builder() { }
+        private Builder() {
+        }
 
         public Builder withAmount(BigDecimal amount) {
             this.amount = amount;

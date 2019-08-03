@@ -1,7 +1,7 @@
 package se.lexicon.account.component.test.integration.dao;
 import se.lexicon.account.component.entity.OrderEntity;
+import se.lexicon.account.component.test.common.entity.OrderEntityTestBuilder;
 import se.lexicon.account.component.test.integration.service.AccountComponentServiceIntegrationTestSuite;
-import se.lexicon.account.component.test.common.entity.AccountEntityTestBuilder;
 import se.lexicon.account.componment.dao.OrderDao;
 import com.so4it.test.category.IntegrationTest;
 import com.so4it.test.gs.rule.ClearGigaSpaceTestRule;
@@ -18,14 +18,15 @@ import org.openspaces.core.GigaSpace;
 @Category(IntegrationTest.class)
 public class OrderComponentDaoIntegrationTest {
 
+
     @ClassRule
     public static final RuleChain SUITE_RULE_CHAIN = AccountComponentDaoIntegrationTestSuite.SUITE_RULE_CHAIN;
 
     @Rule
-    public ClearGigaSpaceTestRule clearGigaSpaceTestRule =
-            new ClearGigaSpaceTestRule(AccountComponentServiceIntegrationTestSuite
-                    .getExportContext()
-                    .getBean(GigaSpace.class));
+    public ClearGigaSpaceTestRule clearGigaSpaceTestRule = new
+            ClearGigaSpaceTestRule(AccountComponentServiceIntegrationTestSuite
+            .getExportContext()
+            .getBean(GigaSpace.class));
 
     @Test
     public void testInsertingOrder(){
@@ -33,9 +34,7 @@ public class OrderComponentDaoIntegrationTest {
                 .getExportContext()
                 .getBean(OrderDao.class);
         OrderEntity accountEntity = accountDao
-                .insert(AccountEntityTestBuilder
-                        .OrderEntityTestBuilder
-                        .builder()
+                .insert(OrderEntityTestBuilder.builder()
                         .build());
     }
 }

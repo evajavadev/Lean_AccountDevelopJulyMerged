@@ -1,57 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lexicon</groupId>
+    <groupId>se.lexicon</groupId>
     <artifactId>account</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>account-component</module>
-	<!--
-
-        <module>agreement</module>
-        <module>analytic</module>
-        <module>arrangement</module>
-        <module>authentication</module>
-        <module>booking</module>
-        <module>bulletin</module>
-        <module>card</module>
-        <module>checkout</module>
-        <module>common</module>
-        <module>device-management</module>
-        <module>endpoint</module>
-        <module>explain</module>
-        <module>gateway</module>
-        <module>integration</module>
-        <module>invoice</module>
-        <module>involved-party</module>
-        <module>involved-party-data-ledger</module>
-        <module>message</module>
-        <module>personal-details</module>
-        <module>product-definition</module>
-        <module>protobuf</module>
-        <module>right-of-disposal</module>
-        <module>risk-scoring</module>
-        <module>screening</module>
-        <module>signature-ledger</module>
-        <module>test</module>
-        <module>transaction</module>
-        <module>util</module>
-	-->
+        <!--
+            <module>agreement</module>
+            <module>analytic</module>
+            <module>arrangement</module>
+            <module>authentication</module>
+            <module>booking</module>
+            <module>bulletin</module>
+            <module>card</module>
+            <module>checkout</module>
+            <module>common</module>
+            <module>device-management</module>
+            <module>endpoint</module>
+            <module>explain</module>
+            <module>gateway</module>
+            <module>integration</module>
+            <module>invoice</module>
+            <module>involved-party</module>
+            <module>involved-party-data-ledger</module>
+            <module>message</module>
+            <module>personal-details</module>
+            <module>product-definition</module>
+            <module>protobuf</module>
+            <module>right-of-disposal</module>
+            <module>risk-scoring</module>
+            <module>screening</module>
+            <module>signature-ledger</module>
+            <module>test</module>
+            <module>transaction</module>
+            <module>util</module>
+        -->
     </modules>
 
-
     <properties>
-
 
         <!--
             The current SUGAR version we are using
         -->
         <sugar.version>0.17.0-RT4-SNAPSHOT</sugar.version>
-
 
         <!--
             Runtime 4.0.0 specific
@@ -172,7 +170,6 @@
         <swagger.dependency.management.artifact.id>swagger-dependency-management-2.8.0</swagger.dependency.management.artifact.id>
         <velocity.dependency.management.artifact.id>velocity-dependency-management-1.7</velocity.dependency.management.artifact.id>
 
-
         <!--
             When building a deployable Processing Unit use this property to exclude any compile time dependencies
             that are provided by GigaSpaces.
@@ -230,7 +227,6 @@
         </maven.war.plugin.exclude>
 
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -487,7 +483,6 @@
                     </dependencies>
                 </plugin>
 
-
                 <plugin>
                     <groupId>com.so4it.sugar</groupId>
                     <artifactId>api-maven-plugin</artifactId>
@@ -529,7 +524,6 @@
                         </includes>
                     </configuration>
                 </plugin>
-
 
                 <plugin>
                     <groupId>org.revapi</groupId>
@@ -598,7 +592,6 @@
             </plugin>
         </plugins>
     </build>
-
 
     <repositories>
         <repository>
@@ -733,5 +726,5 @@
             </plugin>
         </plugins>
     </reporting>
-</project>
 
+</project>

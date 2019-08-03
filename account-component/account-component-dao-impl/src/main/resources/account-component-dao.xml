@@ -12,15 +12,12 @@
         <constructor-arg name="gigaSpace" ref="accountGigaSpace"/>
     </bean>
 
-
     <bean id="accountDao" class="se.lexicon.account.component.dao.AccountDaoImpl">
         <constructor-arg name="gigaSpace" ref="accountGigaSpace"/>
     </bean>
 
-
     <bean id="orderDao" class="se.lexicon.account.component.dao.OrderDaoImpl">
         <constructor-arg name="gigaSpace" ref="accountGigaSpace"/>
     </bean>
-
 
 </beans>

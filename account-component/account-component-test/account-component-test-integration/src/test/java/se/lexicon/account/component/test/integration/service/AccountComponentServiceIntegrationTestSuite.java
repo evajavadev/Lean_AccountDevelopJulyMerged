@@ -36,7 +36,8 @@ public class AccountComponentServiceIntegrationTestSuite {
     private static final int LUS_PORT = PortUtil.nextFreePort();
     private static final ServiceRegistryClient SERVICE_REGISTRY = new FakeServiceRegistry();
     private static final TestConfigurationSource CONFIGURATION_SOURCE = new TestConfigurationSource();
-    private static final DynamicConfiguration DYNAMIC_CONFIGURATION = ServiceFrameworkCommonTest.createDynamicConfiguration(CONFIGURATION_SOURCE);
+    private static final DynamicConfiguration DYNAMIC_CONFIGURATION =
+            ServiceFrameworkCommonTest.createDynamicConfiguration(CONFIGURATION_SOURCE);
     private static final ServiceBeanStateRegistry SERVICE_BEAN_STATE_REGISTRY = new ServiceBeanStateRegistry();
     private static GigaSpaceEmbeddedLusTestRule GIGA_SPACE_TEST_RULE;
     private static SpringContextRule IMPORT_TEST_RULE;
@@ -81,7 +82,6 @@ public class AccountComponentServiceIntegrationTestSuite {
         }
         return IMPORT_TEST_RULE;
     }
-
 
     public static GigaSpaceEmbeddedLusTestRule getGigaSpacesRule() {
         if (GIGA_SPACE_TEST_RULE == null) {

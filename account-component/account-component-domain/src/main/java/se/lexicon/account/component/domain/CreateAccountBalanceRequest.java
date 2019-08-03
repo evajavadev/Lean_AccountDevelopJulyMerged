@@ -24,7 +24,9 @@ public class CreateAccountBalanceRequest extends ValueObject {
     //A set of all the registered balances for this arrangement
     private Set<Balance> balances;
 
-    private CreateAccountBalanceRequest() {}
+    private CreateAccountBalanceRequest() {
+    }
+
     private CreateAccountBalanceRequest(Builder builder) {
         this.arrangementId = Required.notNull(builder.arrangementId,"arrangementId");
         this.batchId = Required.notNull(builder.batchId,"batchId");
@@ -36,9 +38,13 @@ public class CreateAccountBalanceRequest extends ValueObject {
         return arrangementId;
     }
 
-    public String getBatchId() { return batchId; }
+    public String getBatchId() {
+        return batchId;
+    }
 
-    public Instant getInsertionTimestamp() { return insertionTimestamp; }
+    public Instant getInsertionTimestamp() {
+        return insertionTimestamp;
+    }
 
     public Set<Balance> getBalances() {
         return balances;
@@ -51,30 +57,23 @@ public class CreateAccountBalanceRequest extends ValueObject {
 
 
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
     //
-    public static class Builder implements com.so4it.common.builder.Builder<CreateAccountBalanceRequest>{
+    public static class Builder implements com.so4it.common.builder.Builder<CreateAccountBalanceRequest> {
 
-        //The arrangement id of this account balance
         private String arrangementId;
-
-        // Unique id for the posting
         private String batchId;
-
-        // Timestamp from core system when update was made
         private Instant insertionTimestamp;
-
-        //A set of all the registered balances for this arrangement
         private Set<Balance> balances;
 
-        public Builder withArrangementId(String arrangementId){
+        public Builder withArrangementId(String arrangementId) {
             this.arrangementId = arrangementId;
             return this;
         }
 
-        public Builder withBatchId(String batchId){
+        public Builder withBatchId(String batchId) {
             this.batchId = batchId;
             return this;
         }
@@ -84,7 +83,7 @@ public class CreateAccountBalanceRequest extends ValueObject {
             return this;
         }
 
-        public Builder withBalances(Set<Balance> balances){
+        public Builder withBalances(Set<Balance> balances) {
             this.balances = balances;
             return this;
         }

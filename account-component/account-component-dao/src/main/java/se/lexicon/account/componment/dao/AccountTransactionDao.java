@@ -6,5 +6,7 @@ import com.so4it.component.GenericDao;
  */
 
 public interface AccountTransactionDao extends GenericDao<AccountTransactionEntity, String> {
+
+
     AccountTransactionEntity getLatest(String arrangementId);
 }

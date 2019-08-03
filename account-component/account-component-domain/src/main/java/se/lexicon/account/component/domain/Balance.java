@@ -10,7 +10,6 @@ import com.so4it.common.util.object.ValueObject;
 @DomainClass
 public class Balance extends ValueObject {
 
-
     private String address;
     private Phase phase;
     private Money amount;
@@ -38,32 +37,32 @@ public class Balance extends ValueObject {
 
     @Override
     protected Object[] getIdFields() {
-        return new Object[]{address,phase,amount};
+        return new Object[]{ address,phase,amount };
     }
 
 
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
     //
-    public static class Builder implements com.so4it.common.builder.Builder<Balance>{
+    public static class Builder implements com.so4it.common.builder.Builder<Balance> {
 
         private String address;
         private Phase phase;
         private Money amount;
 
-        public Builder withAddress(String address){
+        public Builder withAddress(String address) {
             this.address = address;
             return this;
         }
 
-        public Builder withPhase(Phase phase){
+        public Builder withPhase(Phase phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder withAmount(Money amount){
+        public Builder withAmount(Money amount) {
             this.amount = amount;
             return this;
         }

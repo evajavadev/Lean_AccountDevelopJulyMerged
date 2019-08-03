@@ -14,7 +14,6 @@ public class AccountComponentEntityUnitTest {
 
     @Test
     public void testDomainCompliance() {
-
         TestBuilderExecutor.execute(PACKAGE_NAME, EntityMatchers.getMatchers());
     }
 }

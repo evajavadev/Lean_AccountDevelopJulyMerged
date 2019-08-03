@@ -1,28 +1,19 @@
 package se.lexicon.account.component.domain;
-
 import com.so4it.common.domain.DomainClass;
 import com.so4it.common.util.object.Required;
 import com.so4it.common.util.object.ValueObject;
-
-import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Currency;
 
 @DomainClass
 public class CreateAccountTransactionRequest extends ValueObject {
 
+
     private String arrangementId;
-
     private String batchId;
-
     private Instant insertionTimestamp;
-
     private String address;
-
     private Phase phase;
-
     private Money amount;
-
 
     private CreateAccountTransactionRequest() {
     }
@@ -38,9 +29,8 @@ public class CreateAccountTransactionRequest extends ValueObject {
 
     @Override
     protected Object[] getIdFields() {
-        return new Object[]{arrangementId,batchId, insertionTimestamp, address, phase, amount};
+        return new Object[]{ arrangementId, batchId, insertionTimestamp, address, phase, amount };
     }
-
 
     public String getArrangementId() {
         return arrangementId;
@@ -50,53 +40,58 @@ public class CreateAccountTransactionRequest extends ValueObject {
         return batchId;
     }
 
-    public Instant getInsertionTimestamp() { return insertionTimestamp; }
-
-    public String getAddress() { return address; }
-
-    public Phase getPhase() { return phase; }
-
-    public Money getAmount() { return amount; }
-
-    public static Builder builder(){
-        return new Builder();
+    public Instant getInsertionTimestamp() {
+        return insertionTimestamp;
     }
 
-    public static class Builder implements com.so4it.common.builder.Builder<CreateAccountTransactionRequest>{
+    public String getAddress() {
+        return address;
+    }
+
+    public Phase getPhase() {
+        return phase;
+    }
+
+    public Money getAmount() {
+        return amount;
+    }
+
+
+
+    public static Builder builder() {
+        return new Builder();
+    }
+    //
+    public static class Builder implements com.so4it.common.builder.Builder<CreateAccountTransactionRequest> {
 
         private String arrangementId;
-
         private String batchId;
-
         private Instant insertionTimestamp;
-
         private String address;
-
         private Phase phase;
-
         private Money amount;
 
-        public Builder withArrangementId(String arrangementId){
+        public Builder withArrangementId(String arrangementId) {
             this.arrangementId = arrangementId;
             return this;
         }
 
-        public Builder withBatchId(String batchId){
+        public Builder withBatchId(String batchId) {
             this.batchId = batchId;
             return this;
         }
 
-        public Builder withInsertionTimestamp(Instant insertionTimestamp){
+        public Builder withInsertionTimestamp(Instant insertionTimestamp) {
             this.insertionTimestamp = insertionTimestamp;
             return this;
         }
 
-        public Builder withAddress(String address){
+        public Builder withAddress(String address) {
             this.address = address;
             return this;
         }
 
-        public Builder withPhase(Phase phase){
+        public Builder withPhase(Phase phase) {
             this.phase = phase;
             return this;
         }
@@ -111,6 +106,4 @@ public class CreateAccountTransactionRequest extends ValueObject {
             return new CreateAccountTransactionRequest(this);
         }
     }
-
-
 }

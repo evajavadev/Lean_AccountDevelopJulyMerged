@@ -5,14 +5,16 @@ import com.so4it.common.util.object.Required;
 /**
  * @author Magnus Poromaa {@literal <mailto:magnus.poromaa@so4it.com/>}
  */
-public class AccountComponentClientImpl implements AccountComponentClient{
+
+public class AccountComponentClientImpl implements AccountComponentClient {
 
 
     private AccountComponentService accountComponentService;
 
     public AccountComponentClientImpl(AccountComponentService accountComponentService) {
-        this.accountComponentService = Required.notNull(accountComponentService,
-                "accountComponentService");
+        this.accountComponentService =
+                Required.notNull(accountComponentService,
+                        "accountComponentService");
     }
 
     @Override

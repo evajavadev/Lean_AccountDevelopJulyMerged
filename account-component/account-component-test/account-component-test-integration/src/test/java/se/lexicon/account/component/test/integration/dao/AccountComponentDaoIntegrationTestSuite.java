@@ -28,9 +28,9 @@ import org.junit.runners.Suite;
         AccountComponentDaoIntegrationTest.class,
         OrderComponentDaoIntegrationTest.class
 })
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AccountComponentDaoIntegrationTestSuite {
+
 
     private static final int LUS_PORT = PortUtil.nextFreePort();
     private static final ServiceRegistryClient SERVICE_REGISTRY = new FakeServiceRegistry();

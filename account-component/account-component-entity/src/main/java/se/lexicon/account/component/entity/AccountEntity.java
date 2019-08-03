@@ -17,6 +17,7 @@ public class AccountEntity extends IdEntity<String> {
 
     //The arrangement id of this account balance
     private String id;
+
     // Unique id for the posting
     private BigDecimal amount;
 
@@ -25,8 +26,7 @@ public class AccountEntity extends IdEntity<String> {
 
     private AccountEntity(Builder builder) {
         this.id = builder.id;
-        this.amount = Required.notNull(builder.amount,"amount",
-                builder.isTemplate());
+        this.amount = Required.notNull(builder.amount,"amount",builder.isTemplate());
     }
 
     @Override

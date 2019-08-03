@@ -31,9 +31,8 @@ public class AccountTransaction extends ValueObject {
 
     @Override
     protected Object[] getIdFields() {
-        return new Object[]{id, arrangementId, batchId, insertionTimestamp, address, phase, amount};
+        return new Object[]{ id, arrangementId, batchId, insertionTimestamp, address, phase, amount };
     }
-
 
     public String getId() {
         return id;
@@ -47,21 +46,29 @@ public class AccountTransaction extends ValueObject {
         return batchId;
     }
 
-    public Instant getInsertionTimestamp() { return insertionTimestamp; }
+    public Instant getInsertionTimestamp() {
+        return insertionTimestamp;
+    }
 
-    public String getAddress() { return address; }
+    public String getAddress() {
+        return address;
+    }
 
-    public Phase getPhase() { return phase; }
+    public Phase getPhase() {
+        return phase;
+    }
 
-    public Money getAmount() { return amount; }
+    public Money getAmount() {
+        return amount;
+    }
 
 
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
     //
-    public static class Builder implements com.so4it.common.builder.Builder<AccountTransaction>{
+    public static class Builder implements com.so4it.common.builder.Builder<AccountTransaction> {
 
         private String id;
         private String arrangementId;
@@ -71,32 +78,32 @@ public class AccountTransaction extends ValueObject {
         private Phase phase;
         private Money amount;
 
-        public Builder withId(String id){
+        public Builder withId(String id) {
             this.id = id;
             return this;
         }
 
-        public Builder withArrangementId(String arrangementId){
+        public Builder withArrangementId(String arrangementId) {
             this.arrangementId = arrangementId;
             return this;
         }
 
-        public Builder withBatchId(String batchId){
+        public Builder withBatchId(String batchId) {
             this.batchId = batchId;
             return this;
         }
 
-        public Builder withInsertionTimestamp(Instant insertionTimestamp){
+        public Builder withInsertionTimestamp(Instant insertionTimestamp) {
             this.insertionTimestamp = insertionTimestamp;
             return this;
         }
 
-        public Builder withAddress(String address){
+        public Builder withAddress(String address) {
             this.address = address;
             return this;
         }
 
-        public Builder withPhase(Phase phase){
+        public Builder withPhase(Phase phase) {
             this.phase = phase;
             return this;
         }

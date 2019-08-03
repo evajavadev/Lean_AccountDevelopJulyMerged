@@ -46,7 +46,7 @@ public class AccountBalance extends ValueObject {
 
     @Override
     protected Object[] getIdFields() {
-        return new Object[]{id,arrangementId,batchId};
+        return new Object[]{ id,arrangementId,batchId };
     }
 
     public String getId() {
@@ -61,7 +61,9 @@ public class AccountBalance extends ValueObject {
         return batchId;
     }
 
-    public Instant getInsertionTimestamp() { return insertionTimestamp; }
+    public Instant getInsertionTimestamp() {
+        return insertionTimestamp;
+    }
 
     public Set<Balance> getBalances() {
         return balances;
@@ -69,12 +71,12 @@ public class AccountBalance extends ValueObject {
 
 
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
     //
-    public static class Builder implements com.so4it.common.builder
-            .Builder<AccountBalance>{
+    public static class Builder implements
+            com.so4it.common.builder.Builder<AccountBalance> {
 
         private String id;
         private String arrangementId;
@@ -86,27 +88,27 @@ public class AccountBalance extends ValueObject {
             this.balances = new HashSet<>();
         }
 
-        public Builder withId(String id){
+        public Builder withId(String id) {
             this.id = id;
             return this;
         }
 
-        public Builder withArrangementId(String arrangementId){
+        public Builder withArrangementId(String arrangementId) {
             this.arrangementId = arrangementId;
             return this;
         }
 
-        public Builder withBatchId(String batchId){
+        public Builder withBatchId(String batchId) {
             this.batchId = batchId;
             return this;
         }
 
-        public Builder withInsertionTimestamp(Instant insertionTimestamp){
+        public Builder withInsertionTimestamp(Instant insertionTimestamp) {
             this.insertionTimestamp = insertionTimestamp;
             return this;
         }
 
-        public Builder withBalances(Set<Balance> balances){
+        public Builder withBalances(Set<Balance> balances) {
             this.balances = balances;
             return this;
         }

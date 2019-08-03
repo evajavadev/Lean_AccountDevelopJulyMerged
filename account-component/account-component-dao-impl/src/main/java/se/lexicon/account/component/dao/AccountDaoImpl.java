@@ -7,7 +7,8 @@ import org.openspaces.core.GigaSpace;
  * @author Magnus Poromaa {@literal <mailto:magnus.poromaa@so4it.com/>}
  */
 
-public class AccountDaoImpl extends AbstractSpaceDao<AccountEntity, String> implements AccountDao {
+public class AccountDaoImpl extends AbstractSpaceDao<AccountEntity, String>
+        implements AccountDao {
 
 
     public AccountDaoImpl(GigaSpace gigaSpace) {
